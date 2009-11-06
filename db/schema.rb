@@ -12,6 +12,9 @@
 ActiveRecord::Schema.define(:version => 20091105005729) do
 
   create_table "users", :force => true do |t|
+    t.text     "bio"
+    t.string   "name"
+    t.string   "website"
     t.string   "email",                              :null => false
     t.string   "crypted_password",                   :null => false
     t.string   "password_salt",                      :null => false

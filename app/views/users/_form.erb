@@ -1,6 +1,15 @@
 <%= form.label :email, "E-Mail" %><br />
 <%= form.text_field :email %><br />
 <br />
+<%= form.label :name, "Name" %><br />
+<%= form.text_field :name %><br />
+<br />
+<%= form.label :website, "Website" %><br />
+<%= form.text_field :website %><br />
+<br />
+<%= form.label :bio, "Bio" %><br />
+<%= form.text_area :bio, :rows => 20, :cols => 80 %><br />
+<br />
 <%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
 <%= form.password_field :password %><br />
 <br />
