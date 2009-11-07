@@ -16,11 +16,7 @@ Feature: Account registration
     And I fill in "Password Confirmation" with "bdd000cucumber"
     When I press "Register"
     Then I should be on the homepage
-    When I follow "Login"
-    And I fill in "Email" with "clayton@integrumtech.com"
-    And I fill in "Password" with "bdd000cucumber"
-    When I press "Login"
-    Then I should see "Welcome Back, Clayton"
+    And I should see "Welcome Back, Clayton"
 
 
 

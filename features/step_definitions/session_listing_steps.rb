@@ -1,6 +1,6 @@
 Given /^the following sessions:$/ do |table|
   table.each do |presentations|
-    presentations[:presenter].sessions << presentations[:session]
+    presentations[:presenter].conference_sessions << presentations[:conference_session]
     presentations[:presenter].save
   end
 end
@@ -20,10 +20,10 @@ end
 Transform /^table:Presenter,Title,Start Time,Approval Status$/ do |table|
   table.hashes.map do |hash|
     presenter = Factory.create(:user, {:name => hash[:Presenter]})
-    session = Factory.create(:session, {:title => hash[:Title], 
+    session = Factory.create(:conference_session, {:title => hash[:Title], 
                                         :start_time => hash["Start Time"], 
                                         :approved => hash["Approval Status"]
                                        })
-    {:presenter => presenter, :session => session}
+    {:presenter => presenter, :conference_session => session}
   end
 end

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
 
   def index
-    @users = Session.approved.map{|s| s.user }.compact
+    @users = ConferenceSession.approved.map{|s| s.user }.compact
   end
 
   def new
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Account registered!"
-      redirect_to root_url
+      redirect_back_or_default root_url
     else
       render :action => :new
     end
