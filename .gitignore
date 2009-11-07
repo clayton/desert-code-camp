@@ -1,3 +1,4 @@
+features_rcov
 webrat*
 .DS_Store
 config/database.yml

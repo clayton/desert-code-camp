@@ -17,6 +17,7 @@
       </div>
       <div id="nav">
         <ul>
+          <li><%= link_to("Home", root_path) %></li>
           <li><%= link_to("Presenters", users_path) %></li>
           <li><%= link_to("Sessions", conference_sessions_path) %></li>
           <li><%= link_to("E-mail the camp director", "mailto:campdirector@example.com") %></li>
@@ -25,11 +26,11 @@
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
-      
+
       <%- if show_title? -%>
         <h1><%=h yield(:title) %></h1>
       <%- end -%>
-      
+
       <%= yield %>
     </div>
   </body>

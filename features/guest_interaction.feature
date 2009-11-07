@@ -8,7 +8,5 @@ Feature: Guest interaction
     When I am on the homepage
     Then I should see "E-mail the camp director"
     And I should see a link to "mailto:campdirector@example.com"
-  
-  
-  
-  
+
+

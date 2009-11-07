@@ -83,3 +83,9 @@ a {
 #header{
 	text-align:right;
 }
+
+#nav ul li{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
