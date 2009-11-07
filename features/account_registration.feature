@@ -2,7 +2,7 @@ Feature: Account registration
   In order to use additional features of the site
   As a guest
   I want to register for an account
-  
+
   Scenario: A guest registering for an account
     Given I am a guest
     And I am on the home page
@@ -16,7 +16,11 @@ Feature: Account registration
     And I fill in "Password Confirmation" with "bdd000cucumber"
     When I press "Register"
     Then I should be on the homepage
-    And I should see "Welcome Back, Clayton"
-  
-  
-  
+    When I follow "Login"
+    And I fill in "Email" with "clayton@integrumtech.com"
+    And I fill in "Password" with "bdd000cucumber"
+    When I press "Login"
+    Then I should see "Welcome Back, Clayton"
+
+
+

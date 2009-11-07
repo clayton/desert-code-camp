@@ -1,4 +1,4 @@
-Given /^the following presentations:$/ do |table|
+Given /^the following sessions:$/ do |table|
   table.each do |presentations|
     presentations[:presenter].sessions << presentations[:session]
     presentations[:presenter].save
@@ -6,13 +6,15 @@ Given /^the following presentations:$/ do |table|
 end
 
 Then /^I should see that "([^\"]*)" is presenting "([^\"]*)" on "([^\"]*)"$/ do |name, title, date|
-  response.should have_selector("h2", title)
-  response.should have_selector("p.byline", name)
-  response.should have_selector("p.date", date)
+  response.should have_selector("h2", :content => title)
+  response.should have_selector("p.byline", :content => name)
+  response.should have_selector("p.date", :content => date)
 end
 
 Then /^I should not see that "([^\"]*)" is presenting "([^\"]*)" on "([^\"]*)"$/ do |name, title, date|
-  pending
+  response.should_not have_selector("h2", :content => title)
+  response.should_not have_selector("p.byline", :content => name)
+  response.should_not have_selector("p.date", :content => date)
 end
 
 Transform /^table:Presenter,Title,Start Time,Approval Status$/ do |table|
