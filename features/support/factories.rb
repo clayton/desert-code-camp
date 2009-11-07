@@ -6,9 +6,9 @@ end
 
 Factory.define :user do |user|
   user.email { Factory.next(:email) }
-  user.name ""
-  user.bio ""
-  user.website ""
+  user.name "John Doe"
+  user.bio "Some Guy"
+  user.website "http://example.org"
   user.password "password"
   user.password_confirmation "password"
 end
@@ -16,6 +16,6 @@ end
 Factory.define :conference_session do |session|
   session.title "Example Session Title"
   session.abstract "Examble Session Abstract"
-  session.start_time "2009-11-07 13:40:00"
+  session.start_time Time.now
   session.approved true
 end
