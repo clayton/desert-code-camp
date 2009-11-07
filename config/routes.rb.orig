@@ -1,6 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => "users"
   map.resources :users
+<<<<<<< HEAD:config/routes.rb
+  map.resource :user_sessions
+  map.login "/login", :controller => "user_sessions", :action => "new"
+  map.logout "/logout", :controller => "user_sessions", :action => "destroy"
+
+=======
   map.resource :user_session
   map.login "/login", :controller => "user_sessions", :action => "new"
   map.logout "/logout", :controller => "user_sessions", :action => "destroy"
@@ -8,5 +14,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :conference_sessions
   map.resources :registrations
 
+>>>>>>> withcode:config/routes.rb
   map.root :controller => "pages"
 end

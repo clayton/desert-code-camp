@@ -1,0 +1,9 @@
+<div id="session_list">
+  <% @sessions.each do |session| %>
+    <h2><%= session.title %></h2>
+    <p class="byline"><%= session.user.name %></p>
+    <p class="date"><%= session.start_time.strftime("%b %d, %Y %H:%M") %></p>
+    <p><%= session.abstract %></p>
+    <p><%= link_to("Signup for #{session.title}", new_registration_path(:session_id => session.id)) %></p>
+  <% end %>
+</div>

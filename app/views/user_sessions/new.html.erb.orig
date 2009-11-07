@@ -1,5 +1,9 @@
 <h1>Login</h1>
+<<<<<<< HEAD:app/views/user_sessions/new.html.erb
+
+=======
 <p>Don't have an account? <%= link_to("Register Now", new_user_path) %></p>
+>>>>>>> withcode:app/views/user_sessions/new.html.erb
 <% form_for @user_session, :url => user_session_path do |f| %>
   <%= f.error_messages %>
   <%= f.label :email %><br />

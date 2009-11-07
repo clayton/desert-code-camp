@@ -16,7 +16,8 @@
 
 Given /^the following presenters:$/ do |table|
   table.each do |attrs|
-    Factory.create(:user, attrs)
+    user = Factory.create(:user, attrs)
+    user.conference_sessions.create(:title => "Just for testing", :approved => true)
   end
 end
 

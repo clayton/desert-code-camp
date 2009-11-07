@@ -1,0 +1,5 @@
+<% title("Signup for #{@session.title}") %>
+<% form_for Registration.new do |f| %>
+  <%= hidden_field_tag :session_id, @session.id %>
+  <%= submit_tag("Sign Me Up!") %>
+<% end %>

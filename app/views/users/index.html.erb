@@ -1,0 +1,8 @@
+<% title("Presenters") %>
+<% @users.each do |user| %>
+  <div>
+    <h3><%= user.name %></h3>
+    <p><%= link_to(user.website, user.website) %></p>
+    <p><%= user.bio %></p>
+  </div>
+<% end %>

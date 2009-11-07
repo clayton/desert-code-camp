@@ -12,3 +12,10 @@ Factory.define :user do |user|
   user.password "password"
   user.password_confirmation "password"
 end
+
+Factory.define :conference_session do |session|
+  session.title "Example Session Title"
+  session.abstract "Examble Session Abstract"
+  session.start_time "2009-11-07 13:40:00"
+  session.approved true
+end
