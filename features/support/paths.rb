@@ -12,6 +12,8 @@ module NavigationHelpers
       '/'
     when /the new user page/
       new_user_path
+    when /the new conference sessions page/
+      new_conference_session_path
 
     # Add more mappings here.
     # Here is a more fancy example:

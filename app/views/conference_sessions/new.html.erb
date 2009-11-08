@@ -1,0 +1,13 @@
+<% form_for @conference_session do |f| %>
+  <p>
+    <%= f.label :title, "Title" %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :abstract, "Abstract" %><br />
+    <%= f.text_area :abstract %>
+  </p>
+  <p>
+    <%= submit_tag("Save") %>
+  </p>
+<% end %>

@@ -3,7 +3,7 @@ Feature: Present a session
   As a user
   I want to present a conference session
 
-  @wip
+
   Scenario: Creating a Presentation
     Given I am a logged in user
     And I am on the homepage
@@ -18,7 +18,7 @@ Feature: Present a session
     When I follow "Sessions"
     Then I should see "Rspec is a ruby unit testing framework"
 
-  @wip
+
   Scenario: Editing a Presentation's details
     Given I am a logged in user presenting:
       | Title            | Abstract   |

@@ -1,7 +1,7 @@
 # Factory Girl Factories and Sequences
 
 Factory.sequence(:email) do |number|
-  "user-#{(number.to_f + Time.now.to_f)}@example.org"
+  "user-#{number}@example.org"
 end
 
 Factory.define :user do |user|
