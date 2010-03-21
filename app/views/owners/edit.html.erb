@@ -1,0 +1,12 @@
+<h1>Editing owner</h1>
+
+<% form_for(@owner) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @owner %> |
+<%= link_to 'Back', owners_path %>
