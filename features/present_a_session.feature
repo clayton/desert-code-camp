@@ -18,7 +18,6 @@ Feature: Present a session
     When I follow "Sessions"
     Then I should see "Rspec is a ruby unit testing framework"
 
-
   Scenario: Editing a Presentation's details
     Given I am a logged in user presenting:
       | Title            | Abstract   |

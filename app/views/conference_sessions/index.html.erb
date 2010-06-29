@@ -5,7 +5,7 @@
     <h2><%= session.title %></h2>
     <p class="byline"><%= session.user.name %></p>
     <p class="date"><%= session.start_time.strftime("%b %d, %Y %H:%M") if session.start_time %></p>
-    <p><%= session.abstract %></p>
+    <p><%= display_session_abstract(session.abstract) %></p>
     <p><%= link_to("Signup for #{session.title}", new_registration_path(:session_id => session.id)) %></p>
     <p><%= link_to("Edit This Presentation", edit_conference_session_path(session)) if session.user == current_user %></p>
   <% end %>
