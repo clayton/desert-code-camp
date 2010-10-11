@@ -16,8 +16,8 @@ Given /^I am a logged in user presenting:$/ do |table|
   end
 end
 
-Transform /^table:Title,Abstract$/ do |table|
+Transform /^table:Title,Abstract,Approved$/ do |table|
   table.hashes.map do |hash|
-    Factory.create(:conference_session, {:title => hash[:Title], :approved => true })
+    Factory.create(:conference_session, {:title => hash["Title"], :approved => hash["Approved"] })
   end
 end

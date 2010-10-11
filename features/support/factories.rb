@@ -13,6 +13,10 @@ Factory.define :user do |user|
   user.password_confirmation "password"
 end
 
+Factory.define :admin_user, :parent => :user do |user|
+  user.admin true
+end
+
 Factory.define :conference_session do |session|
   session.title "Example Session Title"
   session.abstract "Examble Session Abstract"

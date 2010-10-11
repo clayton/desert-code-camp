@@ -3,7 +3,6 @@ Feature: Present a session
   As a user
   I want to present a conference session
 
-
   Scenario: Creating a Presentation
     Given I am a logged in user
     And I am on the homepage
@@ -20,8 +19,8 @@ Feature: Present a session
 
   Scenario: Editing a Presentation's details
     Given I am a logged in user presenting:
-      | Title            | Abstract   |
-      | RSpec IS SO COOL | RSPEC ZOMG |
+      | Title            | Abstract   | Approved |
+      | RSpec IS SO COOL | RSPEC ZOMG | true     |
     And I am on the homepage
     When I follow "Sessions"
     Then I should see "Edit This Presentation"
