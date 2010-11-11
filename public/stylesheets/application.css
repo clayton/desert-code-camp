@@ -89,3 +89,11 @@ a {
 	list-style-type: none;
 	padding-right: 20px;
 }
+
+div.search-result{
+	padding: 1em;
+}
+
+div.search-result.even{
+	background:#eee;
+}

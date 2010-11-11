@@ -1,0 +1,12 @@
+<h2>Results for '<%=h params[:query] %>'</h2>
+<%= render :partial => 'search_form' %>
+<% @results.each do |result| %>
+  <div class="<%= cycle('even','odd') %> search-result">
+    <h3><%= result.search_title %></h3>
+    <p>
+      <%= result.search_snippet %>
+    </p>
+  </div>
+<% end %>
+
+<%= will_paginate @results %>

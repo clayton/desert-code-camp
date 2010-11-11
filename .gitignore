@@ -4,4 +4,4 @@ webrat*
 config/database.yml
 tmp/**/*
 log/*
-
+db/sphinx
